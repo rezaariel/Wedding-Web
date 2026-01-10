@@ -550,17 +550,11 @@ footer li {
   .timeline li .timeline-panel::after {
     top: 31px;
   }
-
-  /* MOBILE FIX - Tambahkan ini di bagian bawah CSS */
+  /* MEDIA QUERY FOR MOBILE - PASTE INI SAJA */
   @media (max-width: 768px) {
-    /* Reset navbar untuk mobile */
-    .mynavbar .navbar-nav {
-      margin: 0;
-      padding: 1rem 0;
-    }
-
+    /* Reset font untuk mobile */
     .mynavbar .nav-link {
-      font-family: "Arial", "Helvetica", sans-serif !important; /* Font aman */
+      font-family: "Arial", "Helvetica", sans-serif !important;
       font-size: 1rem !important;
       font-weight: 600 !important;
       text-transform: uppercase;
@@ -570,6 +564,14 @@ footer li {
       border-bottom: 1px solid #eee;
       display: block;
       text-align: left;
+      text-decoration: none !important;
+    }
+
+    /* Hapus pseudo-element jika ada */
+    .mynavbar .nav-link::before,
+    .mynavbar .nav-link::after {
+      content: none !important;
+      display: none !important;
     }
 
     .mynavbar .nav-link:last-child {
@@ -578,22 +580,23 @@ footer li {
 
     .mynavbar .nav-link:hover {
       background-color: #f8f9fa;
-      color: var(--pink) !important;
+      color: #ffa2b9 !important;
     }
 
     /* Offcanvas styling */
     .offcanvas {
-      width: 280px !important; /* Lebar tetap */
+      width: 280px !important;
       background-color: white !important;
     }
 
     .offcanvas-header {
-      background-color: var(--pink);
+      background-color: #ffa2b9;
       color: white;
       padding: 1rem 1.5rem;
     }
 
     .offcanvas-title {
+      font-family: "Sacramento", cursive, "Times New Roman", serif !important;
       font-size: 1.8rem !important;
       font-weight: bold;
     }
@@ -602,22 +605,18 @@ footer li {
       padding: 0 !important;
     }
 
+    /* Navbar items */
+    .navbar-nav {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
     /* Close button */
     .btn-close {
       filter: invert(1) brightness(2);
       opacity: 1;
-    }
-  }
-  /* DEBUG: Tampilkan border merah untuk debugging */
-  @media (max-width: 768px) {
-    .mynavbar * {
-      border: 1px solid red !important;
-    }
-
-    .mynavbar .nav-link::before {
-      content: "[" attr(href) "] ";
-      color: blue;
-      font-size: 0.8rem;
+      padding: 0.5rem !important;
     }
   }
 }
