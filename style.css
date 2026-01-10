@@ -550,4 +550,62 @@ footer li {
   .timeline li .timeline-panel::after {
     top: 31px;
   }
+
+  /* MOBILE FIX - Tambahkan ini di bagian bawah CSS */
+  @media (max-width: 768px) {
+    /* Reset navbar untuk mobile */
+    .mynavbar .navbar-nav {
+      margin: 0;
+      padding: 1rem 0;
+    }
+
+    .mynavbar .nav-link {
+      font-family: "Arial", "Helvetica", sans-serif !important; /* Font aman */
+      font-size: 1rem !important;
+      font-weight: 600 !important;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #333 !important;
+      padding: 0.8rem 1.5rem !important;
+      border-bottom: 1px solid #eee;
+      display: block;
+      text-align: left;
+    }
+
+    .mynavbar .nav-link:last-child {
+      border-bottom: none;
+    }
+
+    .mynavbar .nav-link:hover {
+      background-color: #f8f9fa;
+      color: var(--pink) !important;
+    }
+
+    /* Offcanvas styling */
+    .offcanvas {
+      width: 280px !important; /* Lebar tetap */
+      background-color: white !important;
+    }
+
+    .offcanvas-header {
+      background-color: var(--pink);
+      color: white;
+      padding: 1rem 1.5rem;
+    }
+
+    .offcanvas-title {
+      font-size: 1.8rem !important;
+      font-weight: bold;
+    }
+
+    .offcanvas-body {
+      padding: 0 !important;
+    }
+
+    /* Close button */
+    .btn-close {
+      filter: invert(1) brightness(2);
+      opacity: 1;
+    }
+  }
 }
