@@ -52,6 +52,7 @@ body {
 
 .mynavbar {
   background-color: rgba(255, 255, 255, 0.4) !important;
+  -webkit-backdrop-filter: blur();
   backdrop-filter: blur(4px);
 }
 
@@ -120,19 +121,19 @@ body {
   height: 50px;
   background-color: white;
   display: flex;
-  border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 50%;
-  transform: translateX(-50%) translateY(65px);
   -webkit-transform: translateX(-50%) translateY(65px);
   -moz-transform: translateX(-50%) translateY(65px);
   -ms-transform: translateX(-50%) translateY(65px);
   -o-transform: translateX(-50%) translateY(65px);
+  transform: translateX(-50%) translateY(65px);
 }
 
 .home .heart i {
@@ -252,16 +253,16 @@ body {
   background-color: #ccc;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  border-radius: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -273,11 +274,11 @@ body {
   border: 1px solid #ccc;
   padding: 2rem;
   position: relative;
-  border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  border-radius: 10px;
   background-color: #fff;
 }
 
@@ -384,8 +385,8 @@ footer li {
   color: white;
   opacity: 0.5;
   mix-blend-mode: difference;
-  animation: rotating 4s linear infinite;
   -webkit-animation: rotating 4s linear infinite;
+  animation: rotating 4s linear infinite;
   transform-origin: center;
   display: flex;
   justify-content: center;
@@ -395,40 +396,40 @@ footer li {
 
 @keyframes rotating {
   from {
-    transform: rotate(0);
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
     -o-transform: rotate(0);
+    transform: rotate(0);
   }
   to {
-    transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 /* media query */
 @media (max-width: 992px) {
   .home .heart {
-    transform: translateX(-50%) translateY(65px);
     -webkit-transform: translateX(-50%) translateY(65px);
     -moz-transform: translateX(-50%) translateY(65px);
     -ms-transform: translateX(-50%) translateY(65px);
     -o-transform: translateX(-50%) translateY(65px);
+    transform: translateX(-50%) translateY(65px);
   }
 }
 
 /* extra large */
 @media (max-width: 1200px) {
   .home .heart {
-    transform: translateX(-50%) translateY(45px);
     -webkit-transform: translateX(-50%) translateY(45px);
     -moz-transform: translateX(-50%) translateY(45px);
     -ms-transform: translateX(-50%) translateY(45px);
     -o-transform: translateX(-50%) translateY(45px);
+    transform: translateX(-50%) translateY(45px);
   }
 }
 /* laptop */
@@ -511,11 +512,11 @@ footer li {
 
   .timeline li .timeline-panel {
     width: 65%;
-    transform: translateX(-20px);
     -webkit-transform: translateX(-20px);
     -moz-transform: translateX(-20px);
     -ms-transform: translateX(-20px);
     -o-transform: translateX(-20px);
+    transform: translateX(-20px);
   }
 
   .timeline li .timeline-panel::before {
