@@ -608,4 +608,16 @@ footer li {
       opacity: 1;
     }
   }
+  /* DEBUG: Tampilkan border merah untuk debugging */
+  @media (max-width: 768px) {
+    .mynavbar * {
+      border: 1px solid red !important;
+    }
+
+    .mynavbar .nav-link::before {
+      content: "[" attr(href) "] ";
+      color: blue;
+      font-size: 0.8rem;
+    }
+  }
 }
