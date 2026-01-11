@@ -60,8 +60,20 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
-  height: 1920px;
-  width: 300px;
+  height: 100vh;
+}
+
+.offcanvas-title {
+  font-family: "Sacramento", cursive; /* Sesuaikan dengan font Anda */
+  font-size: 1.5rem !important; /* Jangan terlalu besar agar tidak menabrak tombol X */
+  line-height: 1.2;
+  max-width: 80%; /* Memberi ruang agar tidak menabrak tombol close */
+}
+
+.offcanvas-body .nav-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee; /* Opsional: beri garis pembatas tipis */
 }
 
 .mynavbar .navbar-brand,
